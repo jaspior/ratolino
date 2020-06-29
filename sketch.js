@@ -31,6 +31,19 @@ function draw() {
     cenario1[i].exibe();
     cenario1[i].move();
   }
+  
+  fill(0);
+  strokeWeight(2);
+  stroke(245, this.opacity);
+  textAlign(CENTER);
+  textFont('Georgia')
+  textSize(150);
+  text('Ratolino', width / 2, height / 9 * 7);
+  textSize(50);
+  text('SandBox', width / 2, height / 9 * 6);
+  textSize(30);
+  text('use as setas para se mover e pular', width / 2, height / 9*5);
+  
   personagem.exibe();
   personagem.aplicaGravidade();
   personagem.move()
