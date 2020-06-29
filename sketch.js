@@ -41,9 +41,9 @@ function draw() {
   textSize(150);
   text('Ratolino', width / 2, height / 9 * 5);
   textSize(50);
-  text('SandBox', width / 2, height / 9 * 6);
+  text('SandBox', width / 2, height / 9 * 7);
   textSize(30);
-  text('use as setas para se mover e pular', width / 2, height / 9*7);
+  text('use as setas para se mover e pular', width / 2, height / 9*8);
   
   personagem.exibe();
   personagem.aplicaGravidade();
