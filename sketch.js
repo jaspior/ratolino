@@ -6,7 +6,7 @@ function setup() {
    for (i = 0; i < imagemCenario1.length -1; i++) {
     var p = new Cenario(imagemCenario1[i],i/10);
     cenario1.push(p);
-    somDoJogo.loop();
+    somTeste.loop();
   }
   
   personagem = new Personagem(matrizPersonagem, imagemPersonagem, 5, 5, 100, 100, 0.7, 5);
