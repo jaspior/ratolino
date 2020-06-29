@@ -6,6 +6,7 @@ function setup() {
    for (i = 0; i < imagemCenario1.length -1; i++) {
     var p = new Cenario(imagemCenario1[i],i/10);
     cenario1.push(p);
+    somDoJogo.loop();
   }
   
   personagem = new Personagem(matrizPersonagem, imagemPersonagem, 5, 5, 100, 100, 0.7, 5);
@@ -38,11 +39,11 @@ function draw() {
   textAlign(CENTER);
   textFont('Georgia')
   textSize(150);
-  text('Ratolino', width / 2, height / 9 * 7);
+  text('Ratolino', width / 2, height / 9 * 5);
   textSize(50);
   text('SandBox', width / 2, height / 9 * 6);
   textSize(30);
-  text('use as setas para se mover e pular', width / 2, height / 9*5);
+  text('use as setas para se mover e pular', width / 2, height / 9*7);
   
   personagem.exibe();
   personagem.aplicaGravidade();
