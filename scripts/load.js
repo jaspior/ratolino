@@ -10,6 +10,7 @@ function preload() {
   imagemCenario1.push(loadImage('imagens/cenarios/morro/Hills_4.png'));
   imagemCenario1.push(loadImage('imagens/cenarios/morro/Hills_5.png'));
   imagemCenario1.push(loadImage('imagens/cenarios/morro/Hills_6.png'));
+  somTeste = loadSound('sons/EightMelodies.mp3');
        
   
 
