@@ -1,7 +1,7 @@
 let imagemPersonagem;
-var imagemCenario1 = new Array();
-var cenario1 = [];
-
+let imagemCenario1 = new Array();
+let cenario1 = [];
+let somTeste;
 
 
 const matrizPersonagem = [
