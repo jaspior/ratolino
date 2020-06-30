@@ -6,13 +6,14 @@ function setup() {
    for (i = 0; i < imagemCenario1.length -1; i++) {
     var p = new Cenario(imagemCenario1[i],i/10);
     cenario1.push(p);
-    
   }
   
-  somTeste.loop();  
   personagem = new Personagem(matrizPersonagem, imagemPersonagem, 5, 5, 100, 100, 0.7, 5);
-  
+  somTeste.loop();
 }
+
+
+
 
 function mousePressed() {
  
@@ -20,6 +21,16 @@ function mousePressed() {
    
  
 }
+
+
+function keyPressed(){
+    if(key === 'ArrowUp'){
+      personagem.pula();
+    }
+}
+
+
+/**/
 
 
 
@@ -39,12 +50,13 @@ function draw() {
   stroke(245, this.opacity);
   textAlign(CENTER);
   textFont('Georgia')
-  textSize(150);
-  text('Ratolino', width / 2, height / 9 * 5);
   textSize(50);
-  text('SandBox', width / 2, height / 9 * 7);
-  textSize(30);
-  text('use as setas para se mover e pular', width / 2, height / 9*8);
+  text('As aventuras de', width / 2, height / 3);
+  textSize(150);
+  text('Ratolino', width / 2, height / 5 * 3);
+  
+  
+  
   
   personagem.exibe();
   personagem.aplicaGravidade();
