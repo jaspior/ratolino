@@ -1,6 +1,7 @@
 function preload() {
 
   imagemPersonagem = loadImage('imagens/personagem/ratolino.png');
+  imagemQueijo = loadImage('imagens/assets/queijo.png');
   
 //n consegui fazer um for, paciência  
   

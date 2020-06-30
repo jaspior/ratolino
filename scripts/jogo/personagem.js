@@ -84,7 +84,7 @@ class Personagem extends Animacao {
 
   }
 
-  estaColidindo(inimigo) {
+  estaColidindo(objeto) {
     if (this.invencivel) {
       return false;
     }
@@ -94,13 +94,15 @@ class Personagem extends Animacao {
       this.y,
       this.largura * precisao,
       this.altura * precisao,
-      inimigo.x,
-      inimigo.y,
-      inimigo.largura * precisao,
-      inimigo.altura * precisao
+      objeto.x,
+      objeto.y,
+      objeto.largura * precisao,
+      objeto.altura * precisao
     );
 
     return colisao;
   }
+  
+ 
 
 }

@@ -1,8 +1,10 @@
-let imagemPersonagem;
+let imagemPersonagem, imagemQueijo;
 let imagemCenario1 = new Array();
 let cenario1 = [];
 let somTeste;
 
+//objetos
+let personagem, jogo, queijo;
 
 const matrizPersonagem = [
   [0,0],
