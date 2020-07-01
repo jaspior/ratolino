@@ -12,6 +12,11 @@ function preload() {
   imagemCenario1.push(loadImage('imagens/cenarios/morro/Hills_5.png'));
   imagemCenario1.push(loadImage('imagens/cenarios/morro/Hills_6.png'));
        
-  somTeste = loadSound('sons/EightMelodies.mp3');
+ 
+  imagemTitle = loadImage('imagens/assets/title.png');
+  
+  //somJogo = loadSound('sons/TopGear.mp3');
+  somJogo = loadSound('sons/LostWoods.mp3');
+  somTeste = loadSound('sons/TitleScreen.mp3');
 
 }

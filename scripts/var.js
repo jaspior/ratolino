@@ -1,10 +1,20 @@
 let imagemPersonagem, imagemQueijo;
 let imagemCenario1 = new Array();
+let imagemTitle;
 let cenario1 = [];
-let somTeste;
+let somTeste, somJogo;
+
+let pontuacao;
+
+let botaoStart;
 
 //objetos
 let personagem, jogo, queijo;
+
+let cenaAtual = 'telaInicial';
+//let cenaAtual = 'jogo';
+let cenas;
+let telaInicial;
 
 const matrizPersonagem = [
   [0,0],

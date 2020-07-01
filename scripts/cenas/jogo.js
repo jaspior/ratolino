@@ -1,6 +1,9 @@
 class Jogo {
 
-  constructor() {}
+  constructor() {
+    
+    
+  }
 
 
   setup() {
@@ -10,14 +13,17 @@ class Jogo {
       var p = new Cenario(imagemCenario1[i], i / 10);
       cenario1.push(p);
     }
-
+    
+    pontuacao = new Pontuacao();
     personagem = new Personagem(matrizPersonagem, imagemPersonagem, 5, 5, 100, 100, 0.7, 5);
     queijo = new Coletaveis(imagemQueijo, width - 200, 5, 30,30,1);
     
+   
     
-    somTeste.loop();
 
   }
+  
+ 
 
   keyPressed(key) {
      if (key === "ArrowUp") {
@@ -34,19 +40,13 @@ class Jogo {
     cenario1[i].move();
   }
   
-  fill(0);
-  strokeWeight(2);
-  stroke(245, this.opacity);
-  textAlign(CENTER);
-  textFont('Georgia')
-  textSize(50);
-  text('As aventuras de', width / 2, height / 3);
-  textSize(150);
-  text('Ratolino', width / 2, height / 5 * 3);
+ 
   
+  pontuacao.exibe();
   
   
   queijo.exibe();
+  queijo.aplicaGravidade();
     
   //exiber personagem por ultimo pq ele buga o resto. 
   personagem.exibe();
@@ -58,6 +58,7 @@ class Jogo {
    if (personagem.estaColidindo(queijo)) {
       queijo.coletado = true; 
       queijo.remove();  
+      pontuacao.adicionarPonto();
       
    }
    

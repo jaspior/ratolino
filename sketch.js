@@ -1,22 +1,31 @@
 function setup() {
   createCanvas(windowWidth, windowHeight);
   //createCanvas(400, 400);
+  telaInicial = new TelaInicial();
+  telaInicial.setup();
   jogo = new Jogo();
   jogo.setup();
-  cenas = {};
+  cenas = {jogo:jogo,
+    telaInicial:telaInicial};
+  
+  
+  botaoStart = new Botao('Iniciar', width / 2, height / 2)
   frameRate(40);
+
+
  
 }
 
 
 
 
-/**function mousePressed() {
- 
+
+function mousePressed() {
+    
     personagem.pula()
    
  
-}**/
+}
 
 
 function keyPressed(){
@@ -28,6 +37,7 @@ function keyPressed(){
 
 function draw() {
   
-  jogo.draw();
+   
+  cenas[cenaAtual].draw();
   
 }

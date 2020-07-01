@@ -11,10 +11,13 @@ class Coletaveis {
     this.x = x;
     this.xi = this.x;
     this.variacaoY = variacaoY;
-    this.y = height - this.altura - this.variacaoY;
-    this.yi = this.y;
+    //this.y = height - this.altura - this.variacaoY;
+    this.y = 0;
+    this.yi = height - this.altura - this.variacaoY;
     this.velocidade = 0;
     this.coletado = false;
+    this.velocidadeY = -1;
+    this.gravidade = 2;
   
   }
   
@@ -29,13 +32,24 @@ remove(){
   if(this.coletado){
     //se pa usar o splice
     this.x = - 200;
-    this.y =    0;}
+    this.y =    0;
+    this.velocidadeY = 0}
     setTimeout(() => {
-      this.x = this.xi;
-      this.y = this.yi;
+      this.x = random(0,width);
+      this.y = 0;
       this.exibe()
-    }, 5000); //mseconds
+    }, 1000*parseInt(random(1,5))); //mseconds
 }  
   
+   aplicaGravidade() {
+    this.y = this.y + this.velocidadeY;
+    this.velocidadeY = this.velocidadeY + this.gravidade
+
+    if (this.y > this.yi) {
+      this.y = this.yi;
+      this.velocidadeY = 0;
+     
+    }
+  }
 
 }
