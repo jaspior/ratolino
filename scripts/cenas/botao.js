@@ -1,11 +1,11 @@
 class Botao {
-  constructor(texto, x, y) {
+  constructor(texto, x, y, proximoEstado) {
     this.texto = texto;
     this.x = x;
     this.y = y;
     
     this.botao = createButton(this.texto);
-    this.proximoEstado = 'jogo';
+    this.proximoEstado = proximoEstado;
     this.botao.mousePressed(() => this._alteraCena() );
     this.botao.addClass('botao-tela-inicial');
   }
@@ -20,7 +20,7 @@ class Botao {
     
     this.botao.remove();
        somTeste.stop() 
-       cenaAtual = 'jogo'
+       cenaAtual = this.proximoEstado;
        somJogo.loop(); 
        //gameOver = false;
         

@@ -60,19 +60,24 @@ class Personagem extends Animacao {
     if (this.pulos < 2) {
       this.velocidadeDoPulo = this.alturaDoPulo;
       this.pulos++;
+      
 
       //somDoPulo.play();  
     }
   }
 
   aplicaGravidade() {
+    
     this.y = this.y + this.velocidadeDoPulo
     this.velocidadeDoPulo = this.velocidadeDoPulo + this.gravidade
-
+     
+    
     if (this.y > this.yInicial) {
       this.y = this.yInicial
       this.pulos = 0;
+      
     }
+
   }
 
   ficaInvencivel() {

@@ -1,4 +1,4 @@
-let imagemPersonagem, imagemQueijo;
+let imagemPersonagem, imagemQueijo, imagemPlataforma;
 let imagemCenario1 = new Array();
 let imagemTitle;
 let cenario1 = [];
@@ -9,7 +9,7 @@ let pontuacao;
 let botaoStart;
 
 //objetos
-let personagem, jogo, queijo;
+let personagem, jogo, queijo, plataforma;
 
 let cenaAtual = 'telaInicial';
 //let cenaAtual = 'jogo';

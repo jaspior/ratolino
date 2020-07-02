@@ -35,7 +35,7 @@ remove(){
     this.y =    0;
     this.velocidadeY = 0}
     setTimeout(() => {
-      this.x = random(0,width);
+      this.x = random(0,width-this.larguraSprite);
       this.y = 0;
       this.exibe()
     }, 1000*parseInt(random(1,5))); //mseconds

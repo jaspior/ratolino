@@ -2,6 +2,7 @@ function preload() {
 
   imagemPersonagem = loadImage('imagens/personagem/ratolino.png');
   imagemQueijo = loadImage('imagens/assets/queijo.png');
+  imagemPlataforma = loadImage('imagens/assets/plataforma.png');
   
 //n consegui fazer um for, paciência  
   

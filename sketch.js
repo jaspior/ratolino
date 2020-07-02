@@ -9,7 +9,7 @@ function setup() {
     telaInicial:telaInicial};
   
   
-  botaoStart = new Botao('Iniciar', width / 2, height / 2)
+  botaoStart = new Botao('Iniciar', width / 2, height / 2, 'jogo');
   frameRate(40);
 
 
