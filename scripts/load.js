@@ -1,6 +1,9 @@
 function preload() {
 
-  imagemPersonagem = loadImage('imagens/personagem/ratolino.png');
+  imagemPersonagem.push(loadImage('imagens/personagem/ratolino.png'));
+  imagemPersonagem.push(loadImage('imagens/personagem/ratolino_dano.png'));
+  imagemGatuno = loadImage('imagens/oponentes/Gatuno.png');
+  imagemMosca = loadImage('imagens/oponentes/mosca.png');
   imagemQueijo = loadImage('imagens/assets/queijo.png');
   imagemPlataforma = loadImage('imagens/assets/plataforma.png');
   

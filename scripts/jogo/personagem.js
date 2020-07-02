@@ -1,7 +1,7 @@
 class Personagem extends Animacao {
 
   //enxugar o construtor
-  constructor(matriz, imagem, x, variacaoY, larguraSprite, alturaSprite, proporcao, velocidade) {
+  constructor(matriz, imagem, imagemDano, x, variacaoY, larguraSprite, alturaSprite, proporcao, velocidade, delay) {
     super(matriz, imagem, x, variacaoY, larguraSprite, alturaSprite, proporcao);
 
     this.variacaoY = variacaoY;
@@ -14,7 +14,9 @@ class Personagem extends Animacao {
     this.pulos = 0;
     this.invencivel = false;
     this.velocidade = velocidade;
-
+    this.imagemDano = imagemDano;
+    this.imagemOriginal = imagem;
+    
 
   }
 
@@ -83,10 +85,14 @@ class Personagem extends Animacao {
   ficaInvencivel() {
 
     this.invencivel = true;
+    this.imagem = this.imagemDano;
     setTimeout(() => {
-      this.invencivel = false
+      this.invencivel = false 
     }, 1000); //mseconds
-
+    setTimeout(() => {
+      this.imagem = this.imagemOriginal
+    }, 1000); //mseconds
+    
   }
 
   estaColidindo(objeto) {
@@ -104,7 +110,7 @@ class Personagem extends Animacao {
       objeto.largura * precisao,
       objeto.altura * precisao
     );
-
+    
     return colisao;
   }
   

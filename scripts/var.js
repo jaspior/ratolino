@@ -1,4 +1,5 @@
-let imagemPersonagem, imagemQueijo, imagemPlataforma;
+let imagemQueijo, imagemPlataforma, imagemGatuno, imagemMosca;
+let imagemPersonagem = []
 let imagemCenario1 = new Array();
 let imagemTitle;
 let cenario1 = [];
@@ -9,7 +10,9 @@ let pontuacao;
 let botaoStart;
 
 //objetos
-let personagem, jogo, queijo, plataforma;
+let personagem, jogo, queijo, plataforma, gatuno, mosca;
+let inimigos = [];
+
 
 let cenaAtual = 'telaInicial';
 //let cenaAtual = 'jogo';
@@ -25,4 +28,31 @@ const matrizPersonagem = [
   [100,200],
   [200,0],
   [200,100],
+];
+//50x85
+const matrizGatuno = [
+  [0,0],
+  [85,0],
+  [0,50],
+  [85,50],
+  [0, 100],
+  [85, 100],
+];
+//60x60
+const matrizMosca = [
+  [0,0],
+  [60,0],
+  [120,0],
+  [180,0],
+  [0,60],
+  [60,60],
+  [120,60],
+  [180,60],
+  [0,120],
+  [60,120],
+  [120,120],
+  [180,120],
+  [0,180],
+  [60,180],
+  
 ];

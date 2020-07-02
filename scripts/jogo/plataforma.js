@@ -25,11 +25,11 @@ class Plataforma extends Coletaveis{
 
     }
 
-    if (this.x < 0) {
+    if (this.x < 0 - this.largura) {
       
       this.x = width - this.largura;
     }
-    if (this.x > width - this.largura) {
+    if (this.x > width + this.largura) {
       
       this.x = 0;
     }
@@ -57,4 +57,4 @@ class Plataforma extends Coletaveis{
   }
   
   
-}  
+} 
