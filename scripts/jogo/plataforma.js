@@ -57,4 +57,4 @@ class Plataforma extends Coletaveis{
   }
   
   
-} 
+}  
