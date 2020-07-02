@@ -69,7 +69,7 @@ class Jogo {
       personagem.pulos = 0;
       personagem.velocidadeDoPulo = 0;
       personagem.y  = plataforma.y - personagem.altura;
-    
+      personagem.x = personagem.x + plataforma.velocidade*0.5;
       
    }
     
