@@ -12,7 +12,8 @@ class TelaInicial {
   draw() {
     this._fundo();
     this._texto();
-    this._botao();
+    this._botaoTeste();
+    this._botaoStart();
   }
   
   _fundo() {
@@ -35,10 +36,17 @@ class TelaInicial {
   //text('clique para jogar', width / 2, height / 7 * 5);
   }
   
-  _botao() {
-   botaoStart.y = height / 7 * 5;
-   botaoStart.draw();
+  _botaoTeste() {
+   botaoTeste.y = height /9 * 6.5;
+   botaoTeste.draw();
     }
+  
+  _botaoStart() {
+   botaoStart.y = height / 9 * 8;
+   botaoStart.draw();
+   
+    
+   }
   
   /** alteraCena(){
     

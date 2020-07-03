@@ -8,11 +8,16 @@ class Botao {
     this.proximoEstado = proximoEstado;
     this.botao.mousePressed(() => this._alteraCena() );
     this.botao.addClass('botao-tela-inicial');
+    this.existe = true;
+    
   }
   
   draw() {
     this.botao.position(this.x, this.y);
     this.botao.center('horizontal');
+    if(!this.existe){
+      this.botao.remove();  
+    }
     
   }
   
@@ -25,6 +30,10 @@ class Botao {
        //gameOver = false;
         
         
+  }
+  
+  remove(){
+    this.botao.remove();
   }
  
 }

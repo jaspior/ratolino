@@ -7,10 +7,10 @@ let somTeste, somJogo;
 
 let pontuacao;
 
-let botaoStart;
+let botaoTeste, botaoStart;
 
 //objetos
-let personagem, jogo, queijo, plataforma, gatuno, mosca;
+let personagem, teste, faseRuner, queijo, plataforma, gatuno, mosca, vida, game_Over;
 let inimigos = [];
 
 
@@ -18,6 +18,8 @@ let cenaAtual = 'telaInicial';
 //let cenaAtual = 'jogo';
 let cenas;
 let telaInicial;
+
+let gameOver = true;
 
 const matrizPersonagem = [
   [0,0],
