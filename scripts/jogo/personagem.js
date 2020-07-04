@@ -16,6 +16,7 @@ class Personagem extends Animacao {
     this.velocidade = velocidade;
     this.imagemDano = imagemDano;
     this.imagemOriginal = imagem;
+    this.mergulhando = false;
     
 
   }
@@ -82,7 +83,7 @@ class Personagem extends Animacao {
 
   }
 
-  ficaInvencivel() {
+  ficaInvencivel(time) {
 
     this.invencivel = true;
     this.imagem = this.imagemDano;
@@ -91,7 +92,7 @@ class Personagem extends Animacao {
     }, 1000); //mseconds
     setTimeout(() => {
       this.imagem = this.imagemOriginal
-    }, 1000); //mseconds
+    }, time*1000); //mseconds
     
   }
 
@@ -114,6 +115,14 @@ class Personagem extends Animacao {
     return colisao;
   }
   
+ mergulha(){
+   this.mergulhando = true;
+   if(this.mergulhando && this.y < this.yInicial){
+   this.y = this.y + this.velocidade*50*this.pulos;
+   this.mergulhando = false; 
+   }
+ 
+ }
  
 
 }

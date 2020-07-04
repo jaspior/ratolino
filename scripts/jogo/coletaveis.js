@@ -1,6 +1,6 @@
 class Coletaveis {
 
-  constructor(imagem, x, variacaoY, larguraSprite, alturaSprite, proporcao){
+  constructor(imagem, x, variacaoY, larguraSprite, alturaSprite,velocidade, proporcao,cai){
     
     this.imagem = imagem;
     this.larguraSprite = larguraSprite;
@@ -14,10 +14,11 @@ class Coletaveis {
     //this.y = height - this.altura - this.variacaoY;
     this.y = 0;
     this.yi = height - this.altura - this.variacaoY;
-    this.velocidade = 0;
+    this.velocidade = velocidade;
     this.coletado = false;
     this.velocidadeY = -1;
-    this.gravidade = 2;
+    this.gravidade = 2
+    this.cai = cai;
   
   }
   
@@ -30,15 +31,33 @@ exibe(){
   
 remove(){
   if(this.coletado){
+    if(this.cai){
     //se pa usar o splice
     this.x = - 200;
     this.y =    0;
-    this.velocidadeY = 0}
+    this.velocidadeY = 0
     setTimeout(() => {
       this.x = random(0,width-this.larguraSprite);
       this.y = 0;
-      this.exibe()
+      this.exibe(),
+      this.coletado = false;
     }, 1000*parseInt(random(1,5))); //mseconds
+  }
+  if(!this.cai){
+    this.x = - 200;
+    
+    
+    setTimeout(() => {
+      this.x = random(0,width-this.larguraSprite);
+      //this.y = 0;
+      this.exibe(),
+      this.coletado = false;
+    }, 5000*parseInt(random(1,5))); 
+  
+  
+  
+  }
+  }
 }  
   
    aplicaGravidade() {

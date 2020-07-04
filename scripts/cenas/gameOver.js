@@ -10,6 +10,7 @@ class GameOver {
   }
 
   draw() {
+    this._fundo();
     textAlign(CENTER);
     textSize(25);
     text(
@@ -20,4 +21,8 @@ class GameOver {
 
   }
 
+  _fundo() {
+      image(imagemPerdeu, 0, 0, width, height);
+  }
+  
 }

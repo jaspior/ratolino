@@ -1,4 +1,4 @@
-let imagemQueijo, imagemPlataforma, imagemGatuno, imagemMosca;
+let imagemQueijo, imagemPlataforma, imagemGatuno, imagemMosca, imagemSanic, imagemPerdeu, imagemMeteoro;
 let imagemPersonagem = []
 let imagemCenario1 = new Array();
 let imagemTitle;
@@ -10,7 +10,7 @@ let pontuacao;
 let botaoTeste, botaoStart;
 
 //objetos
-let personagem, teste, faseRuner, queijo, plataforma, gatuno, mosca, vida, game_Over;
+let personagem, teste, faseRuner, queijo, plataforma, gatuno, mosca, vida, sanic, game_Over, meteoro;
 let inimigos = [];
 
 
@@ -58,3 +58,20 @@ const matrizMosca = [
   [60,180],
   
 ];
+
+const matrizSanic = [[0,0],
+                     [0,0],
+                     [0,0],
+                     [0,0],
+                    
+                    ];
+
+const matrizMeteoro = [
+  [0,0],
+  [30,0],
+  [0,30],
+  [30,30],
+  [0,60],
+  
+                      
+                      ];

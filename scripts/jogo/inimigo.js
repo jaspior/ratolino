@@ -7,6 +7,8 @@ class Inimigo extends Animacao {
     this.x = width + delay;
     this.x = width;
     this.voador = voador;
+    this.count = 0;
+    this.yi = this.y
   }
   
   move() {
@@ -17,6 +19,11 @@ class Inimigo extends Animacao {
       this.x = width
     }
     }
+    if(this.voador){
+      this.y = this.yi + 50*sin(this.velocidade*radians(this.count))
+      this.count++;
+    }
+    if(this.count > 180){this.count = 0;}
   }
   
   aparece(){
