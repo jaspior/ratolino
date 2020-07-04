@@ -78,7 +78,7 @@ class Personagem extends Animacao {
     if (this.y > this.yInicial) {
       this.y = this.yInicial
       this.pulos = 0;
-      
+      //this.mergulhando = false;
     }
 
   }
@@ -119,9 +119,13 @@ class Personagem extends Animacao {
    this.mergulhando = true;
    if(this.mergulhando && this.y < this.yInicial){
    this.y = this.y + this.velocidade*50*this.pulos;
-   this.mergulhando = false; 
    }
- 
+  setTimeout(() => {
+      this.mergulhando = false 
+    }, 800)
+  
+      
+   
  }
  
 

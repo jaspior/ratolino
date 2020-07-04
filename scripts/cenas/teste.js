@@ -52,8 +52,8 @@ class Teste {
  
     if (!gameOver && key === "ArrowDown") {
        personagem.mergulha();
-      if(personagem.y > personagem.yInicial){ personagem.ficaInvencivel(0.1);
-    }
+      //if(personagem.y > personagem.yInicial){ personagem.ficaInvencivel(0.1);
+    //}
     }
     
     
@@ -143,7 +143,13 @@ class Teste {
 
     }
    if (personagem.estaColidindo(inimigo)) {
-
+     
+     if(personagem.mergulhando){
+        inimigo.x = -inimigo.largura;
+        pontuacao.adicionarPonto();
+        vida.ganha();
+        }
+     
       personagem.ficaInvencivel();
       console.log('colide');  
       vida.perde();
