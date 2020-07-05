@@ -1,3 +1,5 @@
+var quit_button;
+
 class Tutorial{
 
   constructor(
@@ -5,11 +7,14 @@ class Tutorial{
   
   
   ){
-      this.botao = createButton('jogar');
+    this.botao = createButton('jogar');
     this.proximoEstado = 'teste';
     this.botao.mousePressed(() => this._alteraCena() );
     this.botao.addClass('botao-tela-inicial');
     this.existe = true;
+    if(cenaAtual != 'tutorial'){
+    this.botao.hide()}
+   
   
   }
   
@@ -39,6 +44,7 @@ draw() {
        
     botaoStart.remove();
     this.botao.position(0, 0); 
+    this.botao.show();
   
 
     this._fundo();
