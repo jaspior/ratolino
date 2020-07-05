@@ -1,4 +1,4 @@
-let imagemQueijo, imagemPlataforma, imagemGatuno, imagemMosca, imagemSanic, imagemPerdeu, imagemMeteoro;
+let imagemQueijo, imagemPlataforma, imagemGatuno, imagemMosca, imagemSanic, imagemPerdeu, imagemMeteoro, imagemTutorial;
 let imagemPersonagem = []
 let imagemCenario1 = new Array();
 let imagemTitle;
@@ -7,12 +7,13 @@ let somTeste, somJogo;
 
 let pontuacao;
 
-let botaoTeste, botaoStart;
+let botaoTeste, botaoStart, botaoJogar;
 
 //objetos
-let personagem, teste, faseRuner, queijo, plataforma, gatuno, mosca, vida, sanic, game_Over, meteoro;
+let personagem, teste, faseRuner, queijo, plataforma, gatuno, mosca, vida, sanic, game_Over, meteoro, tutorial;
 let inimigos = [];
-
+//tutorial;
+let personagem_pula, personagem_mergulha, inimigoTeste;
 
 let cenaAtual = 'telaInicial';
 //let cenaAtual = 'jogo';

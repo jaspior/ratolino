@@ -61,7 +61,7 @@ class Teste {
 
   draw() {
     
-    botaoStart.remove();
+    botaoTeste.remove();
      
     
     //cenario.exibe();

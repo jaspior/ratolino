@@ -6,6 +6,7 @@ function preload() {
   imagemMosca = loadImage('imagens/oponentes/mosca.png');
   imagemSanic = loadImage('imagens/oponentes/sanic.png');
   imagemQueijo = loadImage('imagens/assets/queijo.png');
+  imagemTutorial = loadImage('imagens/assets/tutorial.png');
   imagemMeteoro = loadImage('imagens/assets/meteoro.png');
   imagemPlataforma = loadImage('imagens/assets/plataforma.png');
   imagemPerdeu = loadImage('imagens/assets/perdeu.png');
